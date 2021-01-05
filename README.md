@@ -13,7 +13,7 @@ The project can be found here: https://developer.apple.com/documentation/cryptok
 4. Click `Use Keys - Expected to fail`. This will try to compute two same two shared secrets again - but this time it *will* use the key from keychain stored as a variable. 
 
 ## Expected Behaviour
-I expect step 3 and step 4 to produce the same shared secrets. I expect to be able to use the keypair the same way regardless of it being read from keychain. 
+I expect step 2, 3 and 4 to produce the same shared secrets. I expect to be able to use the key the same way regardless of it being used directly after being read from keychain or it being stored in a variable for later use. 
 
 ## Actual Behaviour
 Step 2 and 3 produce the same shared secrets. But in step 4 we get a `Error Domain=CryptoTokenKit Code=-3 "corrupted objectID detected" UserInfo={NSLocalizedDescription=corrupted objectID detected}`. 
